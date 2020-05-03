@@ -8,8 +8,9 @@ const App = () => {
 		<div className="content">
 			<h1 className="text-center">React Base App</h1>
 			<p className="lead">Here is some text in the app</p>
+			<p className="lead">Here is another text in the app.</p>
 			<hr />
-			<img src={auroraImg} alt="Aurora Borealis" height="400" />
+			<img className="image" src={auroraImg} alt="Aurora Borealis" height="400" />
 		</div>
 	</div>;
 };
