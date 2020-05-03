@@ -8,3 +8,15 @@ before_install:
 
 script:
   - docker run my-react-app npm run lint
+
+deploy:
+  provider: elasticbeanstalk
+  region: "sa-east-1"
+  app: "docker-frontend-flow-1"
+  env: "DockerFrontendFlow1-env"
+  bucket_name: "elasticbeanstalk-sa-east-1-867242831151"
+  bucket_path: "docker-frontend-flow-1"
+  on: 
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
